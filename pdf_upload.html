@@ -74,7 +74,7 @@
             let formData = new FormData();
             formData.append('file', fileInput.files[0]);
 
-            fetch('/upload', {
+            fetch('http://127.0.0.1:5000/upload', {
                 method: 'POST',
                 body: formData,
             })
@@ -84,7 +84,7 @@
             })
             .catch(error => {
                 document.getElementById('message').textContent = 'Error uploading file.';
-                console.error(error);
+                console.log(error);
             });
         });
     </script>
